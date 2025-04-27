@@ -97,6 +97,16 @@ function App() {
 
     loadInitialData();
   }, []);
+useEffect(() => {
+  fetch(`${import.meta.env.VITE_BACKEND_URL}/test-firestore`)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Fetched data from backend:', data);
+    })
+    .catch((error) => {
+      console.error('Error fetching data:', error);
+    });
+}, []);
 
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedClarity(clarity), 500);
