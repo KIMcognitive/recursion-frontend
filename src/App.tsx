@@ -7,11 +7,10 @@ import 'firebase/compat/firestore';
 // Initialize Firebase
 
 if (!firebase.apps.length) {
-  
-} else {
-  
+  firebase.initializeApp({});
 }
 const db = firebase.firestore();
+
 
 function App() {
   // Sliders
