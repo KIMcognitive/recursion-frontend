@@ -257,9 +257,8 @@ function App() {
     };
 
     try {
-      const response = await fetch(
-        'https://recursion-backend.onrender.com/recursion-event',
-        {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/recursion-event`, {
+
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
