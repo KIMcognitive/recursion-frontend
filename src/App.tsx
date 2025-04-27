@@ -7,9 +7,12 @@ import 'firebase/compat/firestore';
 // Initialize Firebase
 
 if (!firebase.apps.length) {
-  firebase.initializeApp({});
+  firebase.initializeApp({
+    projectId: "kimcognitive-mvp"
+  });
 }
 const db = firebase.firestore();
+
 
 
 function App() {
